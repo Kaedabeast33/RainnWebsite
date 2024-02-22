@@ -6,6 +6,7 @@ import { Routes,Route } from 'react-router-dom'
 import Layout from './layout/Layout'
 import HomePage from './pages/HomePage'
 import GetHelp from './pages/GetHelp'
+import Chat from './pages/Chat'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/" element={<Layout></Layout>}>
         <Route index element={<HomePage></HomePage>}></Route>
         <Route path="gethelp" element={<GetHelp></GetHelp>}></Route>
+        <Route path="chat" element={<Chat></Chat>}></Route>
       </Route>
         
      

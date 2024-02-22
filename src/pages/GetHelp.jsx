@@ -3,6 +3,7 @@ import Button from '../components/Button'
 import SmallCard from '../components/SmallCard'
 import Card from '../components/Card'
 import Stories from '../components/Stories'
+import { Link } from 'react-router-dom'
 
 const GetHelp = () => {
   return (
@@ -21,10 +22,10 @@ const GetHelp = () => {
             <div className='Circle bg-slate-200 h-[150px] w-[150px] rounded-full'></div>
             <h4>Text</h4>
           </div>
-          <div className='HelpOption flex flex-col items-center'>
+          <Link to="/chat"><div className='HelpOption flex flex-col items-center'>
             <div className='Circle bg-slate-200 h-[150px] w-[150px] rounded-full'></div>
             <h4>Chatbot</h4>
-          </div>
+          </div></Link>
         </div>
         
       </section>

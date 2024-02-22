@@ -17,9 +17,10 @@ const Header = () => {
                 
             </ul>
         </div>
-        <div className='Row2 h-[120px]  grid grid-cols-12 p-2'>
-            <Link to="/"><div className='Logo col-span-2 flex justify-center items-center text-3xl'>Logo</div></Link>
-            <div className='SearchBarContainer col-span-9  h-[35px]  flex  p-2'>
+        <div className='Row2 h-[80px]  grid grid-cols-12 p-2'>
+            <Link to="/"><div className='Logo col-span-2 flex justify-center items-center h-full text-3xl'>Logo</div></Link>
+            <div></div>
+            <div className='SearchBarContainer col-span-9  h-full   flex items-center justify-center  p-2'>
             <ul className='flex gap-4 sm:text-[12px] md:text-[18px] flex justify-between w-full justify-end'>
                 <li className='whitespace-nowrap'>About Rainn</li>
                 <li className='whitespace-nowrap'>Counseling & Training</li>

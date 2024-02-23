@@ -3,7 +3,7 @@ import Button from '../components/Button'
 
 const Footer = () => {
   return (
-    <footer className='flex h-[290px] justify-between  bg-slate-400 items-center'>
+    <footer className='flex flex-col sm:flex-row py-10 px-5 justify-between  bg-slate-400 items-center'>
         <div className=' flex flex-col Subscribe'>
         <ul>
             <li>Get Rainn Updates</li>

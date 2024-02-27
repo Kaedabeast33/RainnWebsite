@@ -6,6 +6,9 @@ import Stories from '../components/Stories'
 import { Link } from 'react-router-dom'
 import {motion} from "framer-motion"
 import { useState } from 'react'
+import group from '../assets/icons/Group.png'
+import message from '../assets/icons/message.png'
+import location from '../assets/icons/saskia_transparent.png'
 
 const GetHelp = () => {
   const[navigateStory,setNavigateStory]=useState(0)
@@ -28,22 +31,22 @@ const GetHelp = () => {
   }
   return (
     <div className='overflow-hidden'>
-      <section className='WarningBanner w-[100vw] h-[130px] bg-slate-500'>
-        <h3 className='text-white'>Your safety is important. If you are in immediate danger, call 911.</h3>
+      <section className='WarningBanner w-[100vw] h-[130px] flex justify-center items-center blue  italic'>
+        <h3 className='text-white text-[24px]'>Your safety is important. If you are in immediate danger, call 911.</h3>
       </section>
       <section className='Jumbotron w-[100vw] h-[400px] bg-slate-100 flex flex-col items-center gap-4'>
       <h2 className='text-center text-[48px]'>Help is Available</h2>
         <div className='h-full flex gap-4 justify-center items-center'>
           <div className='HelpOption flex flex-col items-center'>
-            <div className='Circle bg-slate-200 h-[150px] w-[150px] rounded-full'></div>
+            <div style={{backgroundImage:`url(${group})`}} className='Circle  h-[150px] w-[150px] rounded-full'></div>
             <h4>Call</h4>
           </div>
           <div className='HelpOption flex flex-col items-center'>
-            <div className='Circle bg-slate-200 h-[150px] w-[150px] rounded-full'></div>
+            <div style={{backgroundImage:`url(${message})`}} className='Circle h-[150px] w-[150px] rounded-full'></div>
             <h4>Text</h4>
           </div>
           <Link to="/chat"><div className='HelpOption flex flex-col items-center'>
-            <div className='Circle bg-slate-200 h-[150px] w-[150px] rounded-full'></div>
+            <div style={{backgroundImage:`url(${location})`}} className='Circle  h-[150px] w-[150px] rounded-full'></div>
             <h4>Chatbot</h4>
           </div></Link>
         </div>

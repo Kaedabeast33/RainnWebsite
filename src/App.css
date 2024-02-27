@@ -1,0 +1,60 @@
+.purple{
+    background-color: #9A6FC1;
+}
+.lavender{
+    background-color: #8483C5;
+}
+.darkblue{
+    background-color: #11497C;
+}
+.blue{
+    background-color: #405DA6
+}
+.bgcarousel{
+    background-image:url("./assets/carousel.png");
+}
+.Logo{
+    background-image:url("./assets/logo.png");
+    background-position: center;
+    background-repeat: no-repeat
+    ;
+    background-size: contain;
+}
+.Circle{
+    
+    background-position: center;
+    background-repeat: no-repeat
+    ;
+    background-size: contain;
+}
+button{
+    min-width: fit-content;
+}
+ul > li{
+    color:white;
+}
+.footerlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.active{
+  scale: 1.1;
+}
+.headerhover:hover{
+  background-color: #11497C;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.headerhover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+}

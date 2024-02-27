@@ -11,7 +11,7 @@ const Chat = () => {
       </section>
       <section className="LiveChat flex flex-col gap-10">
         <h1>Live Chat</h1>
-        <ChatBox lr="left-10" text={"What should I call you?"}></ChatBox>
+        <ChatBox  lr="left-10" text={"What should I call you?"}></ChatBox>
         <ChatBox lr="right-10" text={"What should I call you?"}></ChatBox>
         <ChatBox lr="left-10" text={"What should I call you?"}></ChatBox>
         <ChatBox lr="right-10" text={"What should I call you?"}></ChatBox>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({className,children}) => {
   return (
-   <button className={`${className} max-w-[100%] p-2 min-w-[100px] w-[15vw] h-[60px] bg-slate-100 rounded  `}>{children}</button>
+   <button className={`${className} purple max-w-[100%] hover:shadow-lg text-white p-2  w-[15vw] h-[60px] shadow-sm rounded  `}>{children}</button>
   )
 }
 

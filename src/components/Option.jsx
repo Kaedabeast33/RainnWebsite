@@ -1,10 +1,11 @@
 import React from 'react'
+import survivors from '../assets/icons/survivors.png'
 
-const Option = ({title}) => {
+const Option = ({title,icon}) => {
   return (
-    <div>
+    <div className='cursor-pointer'>
          <div className='Option flex flex-col items-center'>
-                    <div className='Circle w-[100px] h-[100px] bg-slate-200 rounded-full'></div>
+                    <div className='Circle hover:shadow-lg w-[100px] h-[100px]  rounded-full' style={{backgroundImage:`url(${icon})`}}></div>
                     <p>{title}</p>
                 </div>
     </div>

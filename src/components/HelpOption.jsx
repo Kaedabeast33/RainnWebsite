@@ -31,7 +31,7 @@ const HelpOption = ({ pic1, pic2,children }) => {
             rotateY: isFlipped ? 180 : 360,
             scale: isFlipped ? 1.2 : 1,
           }}
-          className="Circle flip-card-inner  h-[150px] w-[150px]  flex justify-center items-center  rounded-full"
+          className="Circle flip-card-inner  h-[130px] w-[130px]  flex justify-center items-center  rounded-full"
         >
           <div className="flip-card-front purple border border-[#8F44D3] flex justify-center items-center h-full w-full rounded-full">
             <div

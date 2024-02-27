@@ -51,18 +51,18 @@ const GetHelp = () => {
       <h2 className='text-center text-white text-[48px] z-40'>Help is Available</h2>
         <div className='z-40 h-full flex gap-10 justify-center items-center'>
           <HelpOption pic1={group} pic2={group2}>Call</HelpOption>
-          <HelpOption pic1={message} pic2={message2}>Text</HelpOption>
-          <Link to="/chat">
+          <Link to="/chat"><HelpOption pic1={message} pic2={message2}>Text</HelpOption></Link>
+          
             <HelpOption pic1={chatbox} pic2={chatboxback}>Chat Bot</HelpOption>
-            </Link>
+            
         </div>
         
       </section>
       <section className='InfoSection flex sm:flex-row flex-col items-center justify-center p-4 gap-4'>
-        <SmallCard bg={smallcard} title="What is the Online Hotline?" button="Learn More" description="Whether you’re looking for support, information, advice, or a referral, our trained support specialists are ready to help." ></SmallCard>
-        <SmallCard bg={smallcard2} title="Help Over the Phone." button="Call Now" description="Call the National Sexual Assault Hotline to talk to a trained staff member from your local sexual assault service provider." ></SmallCard>
-        <SmallCard bg={smallcard} title="Help Via Live Chat" button="Chat Now" description="Chat with one on one with a trained staff member. 100% confidential, 100% safe." ></SmallCard>
-        <SmallCard bg={smallcard2} title="Help Via Chat Bot." button="Meet Iris" description="Ask Iris, the new RAINN chatbot, for resources, referrals and information." ></SmallCard>
+        <SmallCard link="/gethelp" bg={smallcard} title="What is the Online Hotline?" button="Learn More" description="Whether you’re looking for support, information, advice, or a referral, our trained support specialists are ready to help." ></SmallCard>
+        <SmallCard link="/gethelp" bg={smallcard2} title="Help Over the Phone." button="Call Now" description="Call the National Sexual Assault Hotline to talk to a trained staff member from your local sexual assault service provider." ></SmallCard>
+        <SmallCard link="/chat" bg={smallcard} title="Help Via Live Chat" button="Chat Now" description="Chat with one on one with a trained staff member. 100% confidential, 100% safe." ></SmallCard>
+        <SmallCard link="/gethelp" bg={smallcard2} title="Help Via Chat Bot." button="Meet Iris" description="Ask Iris, the new RAINN chatbot, for resources, referrals and information." ></SmallCard>
         
       </section>
       <section className='flex flex-col items-center gap-4 justify-center'>

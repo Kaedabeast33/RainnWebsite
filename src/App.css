@@ -65,3 +65,43 @@ ul > li{
 h4{
     color:white;
 }
+.buttonhover:hover{
+    background-color: #7637b0 !important;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.lightblue{
+    background-color: #DCE6FF;
+    color: #11497C
+    
+}
+.darkpurple{
+    background-color: #8F44D3;
+    color: white;
+}
+.pulse{
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes pulse {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.25;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.underline{
+    border-bottom: 3px solid #ffffff;
+}
+.underline:hover{
+    border-bottom: 3px solid #000000;
+}

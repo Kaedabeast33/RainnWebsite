@@ -3,14 +3,10 @@ import Button from "./Button";
 
 const ExplorePanels = ({ className, title, children, icon, overlay }) => {
   const ref = useRef(null);
-  function handleClick() {
-    ref.current.classList.add("active");
-    console.log("clicked");
-  }
+ 
   return (
     <div
-      onMouseLeave={() => ref.current.classList.remove("active")}
-      onMouseEnter={handleClick}
+      
       className={
         className +
         " overflow-hidden  relative p-2 h-[300px] w-full sm:h-[420px] flex flex-col gap-4 "
@@ -30,10 +26,10 @@ const ExplorePanels = ({ className, title, children, icon, overlay }) => {
       <div
         className={`absolute top-0 h-full w-full bg-[${overlay}]   opacity-70`}
       ></div>
-      <p className=" text-[24px] text-white md:text-[36px] font-bold p-4 z-40">
+      <p className=" text-[24px] text-white sm:text-[24px] md:text-[28px] lg:text-[36px] font-bold p-4 z-40">
         {title}
       </p>
-      <Button className={"z-40 mx-4 absolute bottom-20"}>{children}</Button>
+      <Button  className={"z-40 mx-4 absolute md:bottom-10 bottom-20"}>{children}</Button>
     </div>
   );
 };

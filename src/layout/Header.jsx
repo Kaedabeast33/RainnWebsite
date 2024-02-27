@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Vector from "../assets/icons/Vector.png";
+import search from "../assets/icons/MagnifyingGlass.png";
+import {motion} from "framer-motion"
+import NavigationOptions from "./NavigationOptions";
+
 
 const Header = () => {
   const [hamMenu, setHamMenu] = useState(false);
+  
   return (
     <header className="overflow-hidden w-full">
       {hamMenu ? (
@@ -21,10 +27,11 @@ const Header = () => {
 
       <div className="Row w-full hidden sm:block bg-slate-300">
         <ul className="grid grid-cols-24 text-[12px] w-[100vw]  lg:text-[18px]  md:texspace-nowrap justify-around">
+         
           <li className="text-[12px] min-w-[fit-content] col-span-5    lg:text-[18px] p-2 flex justify-center  h-full whitespace-nowrap darkblue text-white">
             Help is available 24/7
           </li>
-          <div className="grid grid-cols-4 col-span-10  h-full  lavender">
+          <div className="grid grid-cols-4 col-span-11  h-full  lavender">
             <li className="text-[12px] col-span-3  lg:text-[18px] p-2  flex justify-center  h-full whitespace-nowrap  border-r border-slate-400">
               Call 800.656.HOPE (4673)
             </li>
@@ -35,17 +42,17 @@ const Header = () => {
           <li className=" col-span-3 text-[12px] min-w-[fit-content] lg:text-[18px]  p-2 flex justify-center  h-full whitespace-nowrap purple">
             Donate
           </li>
-          <li className=" col-span-2 text-[12px] min-w-[fit-content] lg:text-[18px] p-2 flex justify-center  h-full whitespace-nowrap  text-white blue">
-            Search
+          <li className=" col-span-1 text-[12px] min-w-[fit-content] lg:text-[18px] p-2 flex justify-center  h-full whitespace-nowrap  text-white blue">
+            <div className=" w-[50px]" style={{backgroundImage:`url(${search})`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"contain"}}></div>
           </li>
           <li className="col-span-4  text-[12px] min-w-[fit-content]  lg:text-[18px]  p-2 flex justify-center  h-full whitespace-nowrap darkblue text-white">
-            En/Sp
+            <div className="w-[50px] h-[px]" style={{backgroundImage:`url(${Vector})`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"contain"}}></div><p>En/Sp</p>
           </li>
         </ul>
       </div>
       <div className="Row2 relative  h-[100px] flex justify-between items-center  sm:grid grid-cols-12 px-2">
         <Link className="p-10 sm:p-0" to="/">
-          <div className="Logo  absolute col-span-2 top-0 h-[100px] w-[200px] "></div>
+          <div className="Logo  absolute col-span-2 top-0 h-[80px] w-[200px] "></div>
         </Link>
         <div>
           <p onClick={() => setHamMenu(!hamMenu)} className="mx-2  sm:hidden">
@@ -55,24 +62,13 @@ const Header = () => {
 
         <div className="SearchBarContainer hidden sm:block sm:col-span-10 md:col-span-9 h-full    flex items-center justify-center  p-2">
           <ul className="flex gap-4 sm:text-[12px] h-full lg:text-[18px] text-black flex justify-between items-center w-full justify-end">
-            <li className="headerhover  h-full w-full flex  text-black  whitespace-nowrap ">
-              About Rainn
-            </li>
-            <li className="headerhover justify-center items-center h-full w-full text-black whitespace-nowrap">
-              Counseling & Training
-            </li>
-            <li className="headerhover justify-center items-center h-full w-full text-black whitespace-nowrap">
-              Press Center
-            </li>
-            <li className="headerhover justify-center items-center h-full w-full text-black whitespace-nowrap">
-              Public Policy
-            </li>
-            <li className="headerhover justify-center items-center h-full w-full text-black whitespace-nowrap">
-              Support Rainn
-            </li>
-            <li className="headerhover justify-center items-center h-full w-full text-black whitespace-nowrap">
-              Sexual Violence
-            </li>
+          <NavigationOptions>About Rainn</NavigationOptions>
+            <NavigationOptions>Counseling & Training</NavigationOptions>
+            <NavigationOptions>Press Center</NavigationOptions>
+            <NavigationOptions>Public Policy</NavigationOptions>
+            <NavigationOptions>Support Rainn</NavigationOptions>
+            <NavigationOptions>Sexual Violence</NavigationOptions>
+            
           </ul>
         </div>
       </div>

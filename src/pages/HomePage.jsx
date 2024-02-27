@@ -7,14 +7,20 @@ import survivors from '../assets/icons/survivors.png'
 import consulting from '../assets/icons/consulting.png'
 import education from '../assets/icons/education.png'
 import policy from '../assets/icons/policy.png'
-import afraidchild from '../assets/afraidchild.png'
+import clocks from "../assets/backgroundimages/clocks.png"
+import eye from      "../assets/backgroundimages/eye.png"
+import moneytree from "../assets/backgroundimages/moneytree.png"
+
+
 const HomePage = () => {
   return (
     <div className='h-[full] '>
-        <section className='Carousel relative h-[280px] bg-slate-800 w-full flex justify-center'>
-            <div className='bgcarousel w-full w-[80%]  '></div>
+        <section className='Carousel relative h-[250px] bg-slate-800 w-full flex justify-center'>
+            <div className='bgcarousel w-full w-[80%]  relative'>
+                <p className='text-white z-40 text-[40px] font-bold absolute top-10 right-10'>We are here to help</p>
+            </div>
             <div className='absolute bottom-10 right-10 h-[50px] w-[30%] z-40 ' ><p className='purple text-white h-full max-w-[200px] flex justify-center items-center'>Learn More</p></div>
-            <div className='absolute bg-slate-800 opacity-30  h-full w-[100vw] ' ></div>
+            <div  className='absolute opacity-30 bg-[#27313D]  h-full w-[100vw] ' ></div>
         </section>
         <section className='HotlineBar blue h-[110px] justify-center items-center grid grid-cols-2  '>
             <p className='px-5 text-[14px] md:text-[18px] sm:w-[400px] mx-auto font-bold text-white'>Help is available. Call or text the National Assault Hotline. Free. Confidential. Available 24/7.</p>
@@ -39,7 +45,7 @@ const HomePage = () => {
                <div>
                <Option title="Improving People Policy" />
                <Option title="Cousneling and Training" />
-               </div> L
+               </div> 
             </div>
             <div className='Buttons mt-10 flex gap-4' >
                 <Button>Learn More</Button>
@@ -47,9 +53,9 @@ const HomePage = () => {
             </div>
         </section>
         <section className='Explore flex flex-col sm:grid mt-10 sm:grid-cols-3'>
-           <ExplorePanels  overlay="#11497C" icon={afraidchild} title="What are the warning signs of child sexual abuse?" className="">Read More</ExplorePanels>
-           <ExplorePanels overlay="#54396C" icon={afraidchild} title="Every 68 seconds, another American is sexually assaulted." className="">More Stats</ExplorePanels>
-           <ExplorePanels overlay="#11497C" icon={afraidchild} title="$0.91 of every $1 goes to helping survivors and preventing sexual violence." className="">Donate</ExplorePanels>
+           <ExplorePanels  overlay="#11497C" icon={eye} title="What are the warning signs of child sexual abuse?" className="">Read More</ExplorePanels>
+           <ExplorePanels overlay="#54396C" icon={clocks} title="Every 68 seconds, another American is sexually assaulted." className="">More Stats</ExplorePanels>
+           <ExplorePanels overlay="#11497C" icon={moneytree} title="$0.91 of every $1 goes to helping survivors and preventing sexual violence." className="">Donate</ExplorePanels>
         </section>
     </div>
   )

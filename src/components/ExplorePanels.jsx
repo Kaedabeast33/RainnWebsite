@@ -13,7 +13,7 @@ const ExplorePanels = ({ className, title, children, icon, overlay }) => {
       onMouseEnter={handleClick}
       className={
         className +
-        " overflow-hidden  relative p-2 h-[300px] w-full sm:h-[420px] flex flex-col justify-between items-center"
+        " overflow-hidden  relative p-2 h-[300px] w-full sm:h-[420px] flex flex-col gap-4 "
       }
     >
       <div
@@ -33,7 +33,7 @@ const ExplorePanels = ({ className, title, children, icon, overlay }) => {
       <p className=" text-[24px] text-white md:text-[36px] font-bold p-4 z-40">
         {title}
       </p>
-      <Button className={"z-40"}>{children}</Button>
+      <Button className={"z-40 mx-4 absolute bottom-20"}>{children}</Button>
     </div>
   );
 };

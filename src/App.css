@@ -1,17 +1,21 @@
 .purple{
-    background-color: #9A6FC1;
+    background-color: #8F44D3;
 }
 .lavender{
-    background-color: #8483C5;
+    background-color: #D4B6FB;
 }
 .darkblue{
     background-color: #11497C;
 }
 .blue{
-    background-color: #405DA6
+    background-color: #324881
 }
 .bgcarousel{
-    background-image:url("./assets/carousel.png");
+    background-image:url("./assets/backgroundimages/hands.png");
+    background-position: center;
+    background-repeat: no-repeat
+    ;
+    background-size: cover;
 }
 .Logo{
     background-image:url("./assets/logo.png");
@@ -41,7 +45,7 @@ ul > li{
 .active{
   scale: 1.1;
 }
-.headerhover:hover{
+/* .headerhover:hover{
   background-color: #11497C;
   color:white;
   display: flex;
@@ -49,7 +53,7 @@ ul > li{
   align-items: center;
   
   
-}
+} */
 .headerhover{
     display: flex;
     justify-content: center;
@@ -57,4 +61,7 @@ ul > li{
     height: 100%;
     width: 100%;
     gap: 10px;
+}
+h4{
+    color:white;
 }

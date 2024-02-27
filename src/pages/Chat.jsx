@@ -2,13 +2,12 @@ import React from 'react'
 
 import ChatBox from '../components/Chat'
 import Button from '../components/Button'
+import WarningBanner from '../components/WarningBanner'
 
 const Chat = () => {
   return (
     <div className='relative'>
-        <section className='WarningBanner w-[100vw] h-[130px] bg-slate-500'>
-        <h3 className='text-white'>Your safety is important. If you are in immediate danger, call 911.</h3>
-      </section>
+       <WarningBanner/>
       <section className="LiveChat flex flex-col gap-10">
         <h1>Live Chat</h1>
         <ChatBox  lr="left-10" text={"What should I call you?"}></ChatBox>

@@ -2,26 +2,27 @@ import React, { useState } from "react";
 import message from "../assets/icons/message.png";
 import { motion } from "framer-motion";
 
-const HelpOption = ({ pic1, pic2,children }) => {
+const HelpOption = ({ pic1, pic2, children, onClick }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
   function handleFlip() {
-  
-      setIsAnimating(true);
-      setIsFlipped(!isFlipped);
-    
+    setIsAnimating(true);
+    setIsFlipped(!isFlipped);
   }
 
   return (
-    <div className="flex items-center justify-center cursor-pointer">
+    <div
+      onClick={onClick}
+      className=" flex items-center justify-center cursor-pointer"
+    >
       <div
         onMouseEnter={handleFlip}
         onMouseLeave={handleFlip}
         className="HelpOption flip-card flex flex-col items-center"
       >
         <motion.div
-        //   whileHover={{ setIsFlipped: true }}
+          //   whileHover={{ setIsFlipped: true }}
           onAnimationComplete={() => {
             setIsAnimating(false);
           }}
@@ -31,7 +32,7 @@ const HelpOption = ({ pic1, pic2,children }) => {
             rotateY: isFlipped ? 180 : 360,
             scale: isFlipped ? 1.2 : 1,
           }}
-          className="Circle flip-card-inner  h-[130px] w-[130px]  flex justify-center items-center  rounded-full"
+          className="Circle flip-card-inner   h-[130px] w-[130px]  flex justify-center items-center  rounded-full"
         >
           <div className="flip-card-front purple border border-[#8F44D3] flex justify-center items-center h-full w-full rounded-full">
             <div

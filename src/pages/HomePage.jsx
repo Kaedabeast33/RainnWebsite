@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Option from "../components/Option";
 import ExplorePanels from "../components/ExplorePanels";
 import Button from "../components/Button";
@@ -10,17 +10,21 @@ import policy from "../assets/icons/policy.png";
 import clocks from "../assets/backgroundimages/clocks.png";
 import eye from "../assets/backgroundimages/eye.png";
 import moneytree from "../assets/backgroundimages/moneytree.png";
+import LiveChatModal from "../components/LiveChatModal";
+import { useGlobalContext } from "../context/GlobalContext";
 
 const HomePage = () => {
+  const {modal,setModal}=useGlobalContext()
   return (
     <div className="h-[full] ">
+     
       <section className="Carousel relative h-[250px] bg-slate-800 w-full flex justify-center">
         <div className="bgcarousel w-full w-[80%]  relative">
-          <p className="text-white z-40 text-[40px] font-bold absolute top-10 right-10">
+          <p className="text-white z-30 text-[40px] font-bold absolute top-10 right-10">
             We are here to help
           </p>
         </div>
-        <div className="absolute bottom-10 right-10 h-[50px] w-[30%] z-40 ">
+        <div className="absolute bottom-10 right-10 h-[50px] w-[30%] z-30 ">
           <p className="buttonhover rounded purple text-white h-full max-w-[200px] flex justify-center items-center">
             Learn More
           </p>
@@ -36,9 +40,9 @@ const HomePage = () => {
           <div className="]">
             <Button title="">800.656.HOPE</Button>
           </div>
-          <Link to="/gethelp">
+          <div onClick={()=>setModal(true)}>
             <Button>Live Chat</Button>
-          </Link>
+          </div>
         </div>
       </section>
       <section className="Options flex flex-col items-center mt-10 gap-[40px]">

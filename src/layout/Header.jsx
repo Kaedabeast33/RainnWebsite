@@ -5,16 +5,21 @@ import search from "../assets/icons/MagnifyingGlass.png";
 import { motion } from "framer-motion";
 import NavigationOptions from "./NavigationOptions";
 import Row1Option from "./Row1Option";
+import { useGlobalContext } from "../context/GlobalContext";
+import LiveChatModal from "../components/LiveChatModal";
 
 const Header = () => {
   const [hamMenu, setHamMenu] = useState(false);
+  const {modal,setModal}=useGlobalContext()
 
   return (
     <header className=" w-full">
+       {modal?<LiveChatModal setModal={setModal}></LiveChatModal>
+      :null}
       {hamMenu ? (
         <>
-          <div className="fixed h-[300vh] w-[300vw] opacity-50 bg-black z-40"></div>
-          <div className="h-[90vh] w-[100vw] p-10 fixed bg-slate-300 opacity-100 z-50">
+          <div className="fixed h-[300vh] w-[300vw] opacity-50 bg-black z-30"></div>
+          <div className="h-[90vh] w-[100vw] p-10 fixed bg-slate-300 opacity-100 z-40">
             <div className="flex justify-between">
               <div className="Language"></div>
               <p onClick={() => setHamMenu(!hamMenu)} className="text-2xl">
@@ -39,14 +44,14 @@ const Header = () => {
                 Call 800.656.HOPE (4673)
               </Row1Option>
             </Link>
-            <Link
-              className="text-[12px]  lg:text-[18px] min-w-[fit-content] flex py-2 justify-center h-full whitespace-nowrap  "
+            <div onClick={()=>setModal(true)}
+              className="text-[12px] cursor-pointer  lg:text-[18px] min-w-[fit-content] flex py-2 justify-center h-full whitespace-nowrap  "
               to={"/gethelp"}
             >
               <Row1Option span={""} color="" text="text-black">
                 Live Chat
               </Row1Option>
-            </Link>
+            </div>
           </div>
           <Row1Option span={"col-span-3"} color="purple">
             Donate
@@ -86,7 +91,7 @@ const Header = () => {
           </p>{" "}
         </div>
 
-        <div className="SearchBarContainer z-50 hidden sm:block sm:col-span-10 lg:col-span-9 h-full    flex items-center justify-center  p-2">
+        <div className="SearchBarContainer z-40 hidden sm:block sm:col-span-10 lg:col-span-9 h-full    flex items-center justify-center  p-2">
           <ul className="flex gap-4 sm:text-[12px] relative h-full lg:text-[18px] text-black flex justify-between items-center w-full justify-end">
             <NavigationOptions
               navigationitems={[

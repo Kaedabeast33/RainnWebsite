@@ -7,6 +7,9 @@ import NavigationOptions from "./NavigationOptions";
 import Row1Option from "./Row1Option";
 import { useGlobalContext } from "../context/GlobalContext";
 import LiveChatModal from "../components/LiveChatModal";
+import menu from "../assets/icons/Union.png";
+import vector2 from "../assets/Vector.png"
+
 
 const Header = () => {
   const [hamMenu, setHamMenu] = useState(false);
@@ -18,20 +21,38 @@ const Header = () => {
       :null}
       {hamMenu ? (
         <>
-          <div className="fixed h-[300vh] w-[300vw] opacity-50 bg-black z-30"></div>
-          <div className="h-[90vh] w-[100vw] p-10 fixed bg-slate-300 opacity-100 z-40">
+          <div onClick={() => setHamMenu(!hamMenu)} className="fixed w-[100vw] h-[100vh]   z-30"></div>
+          <div className="h-[90vh] w-[70vw] right-0 p-10 fixed bg-white opacity-100 z-40">
             <div className="flex justify-between">
-              <div className="Language"></div>
+              <div className="flex">
+              <div style={{ backgroundImage: `url(${vector2})`, backgroundSize: "contain", backgroundPosition: "center",backgroundRepeat: "no-repeat", height: "30px", width: "30px" }} className="Language"></div>
+              <p className="text-[#8F44D3]">EN/SP</p>
+              </div>
               <p onClick={() => setHamMenu(!hamMenu)} className="text-2xl">
                 X
               </p>
+            </div>
+            <div className="grid grid-cols-3 mx-auto border rounded-lg h-[40px] w-[210px] ">
+              <div className="col-span-2">
+                <input className="w-full h-full"></input>
+              </div>
+              <div className="purple"></div>
+
+            </div>
+            <div className="flex flex-col gap-10 mt-10">
+              <NavigationOptions>About Rainn</NavigationOptions>
+              <NavigationOptions>Counseling & Training</NavigationOptions>
+              <NavigationOptions>Press Center</NavigationOptions>
+              <NavigationOptions>Public Policy</NavigationOptions>
+              <NavigationOptions>Support Rainn</NavigationOptions>
+              <NavigationOptions>Sexual Violence</NavigationOptions>
             </div>
           </div>
         </>
       ) : null}
 
-      <div className="Row w-full hidden sm:block bg-slate-300">
-        <ul className="grid grid-cols-24 text-[12px] w-[100vw]  lg:text-[18px]  md:texspace-nowrap justify-around">
+      <div className="Row w-full hidden sm:block ">
+        <ul className="sm:grid grid-cols-24 text-[12px] w-[100vw]  lg:text-[18px]  md:texspace-nowrap justify-around">
           <Row1Option span={"col-span-5"} color="darkblue">
             Help is available 24/7
           </Row1Option>
@@ -81,14 +102,14 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="Row2 relative  h-[100px] flex justify-between items-center  sm:grid grid-cols-12 px-2">
-        <Link className="p-10 sm:p-0" to="/">
-          <div className="Logo  absolute col-span-2 top-0 h-[80px] w-[100px] md:w-[150px] lg:w-[200px] "></div>
+      <div className="Row2 relative  h-[80px] sm:h-[100px] flex justify-between items-center  sm:grid grid-cols-12 px-2">
+        <Link className=" sm:p-0" to="/">
+          <div className="Logo  absolute col-span-2 top-0 left-4 h-[80px] w-[100px] md:w-[150px] lg:w-[200px] "></div>
         </Link>
         <div>
-          <p onClick={() => setHamMenu(!hamMenu)} className="mx-2  sm:hidden">
-            Menu
-          </p>{" "}
+          <p onClick={() => setHamMenu(!hamMenu)} style={{backgroundImage: `url(${menu})`}} className="mx-4 w-[36px] h-[24px] text-[#11497C] text-[36px]  sm:hidden">
+           
+          </p>
         </div>
 
         <div className="SearchBarContainer z-40 hidden sm:block sm:col-span-10 lg:col-span-9 h-full    flex items-center justify-center  p-2">
@@ -146,17 +167,17 @@ const Header = () => {
         </div>
       </div>
       <div className="sm:hidden flex flex-col justify-center items-center">
-        <div className="h-[40px]  w-full ">
-          <p className="text-center text-[24px] text-white">
+        <div className="h-[36px]  w-full ">
+          <p className="text-center darkblue text-[24px] text-white italic">
             Help is available 24/7
           </p>
         </div>
-        <div className="h-[40px] w-full  flex justify-center whitespace-nowrap">
-          <p className="text-center border-r border-slate-400 text-[16px]  ">
+        <div className="h-[40px] w-full lavender  flex justify-around items-center whitespace-nowrap">
+          <p className="text-center border-r px-2 border-slate-400 text-[16px]  ">
             Call 800.656.HOPE (4673)
           </p>
-          <p className="text-center text-[16px]">Donate</p>
-          <p className="">Live Chat</p>
+        
+          <p className="text-center w-full text-[16px]">Live Chat</p>
         </div>
       </div>
     </header>

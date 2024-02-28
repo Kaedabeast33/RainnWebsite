@@ -18,7 +18,7 @@ const LiveChatModal = ({ setModal }) => {
               X
             </p>
           </div>
-          <h1 className="text-white text-[40px] my-4 font-black">
+          <h1 className="text-white text-[32px] sm:text-[40px] my-4 font-black">
             Start Live Chat?
           </h1>
           <div className="flex my-4 gap-4">

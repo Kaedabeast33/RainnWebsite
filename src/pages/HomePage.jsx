@@ -18,27 +18,28 @@ const HomePage = () => {
   return (
     <div className="h-[full] ">
      
-      <section className="Carousel relative h-[250px] bg-slate-800 w-full flex justify-center">
-        <div className="bgcarousel w-full w-[80%]  relative">
-          <p className="text-white z-30 text-[40px] font-bold absolute top-10 right-10">
+      <section className="Carousel relative h-[160px] sm:h-[250px] bg-slate-800 w-full flex justify-center">
+        <div className="bgcarousel  w-full   relative">
+          <p className="text-white mx-[20px] -[10px] z-30 text-[20px] sm:text-[40px] font-bold absolute top-10 right-10">
             We are here to help
           </p>
         </div>
-        <div className="absolute bottom-10 right-10 h-[50px] w-[30%] z-30 ">
-          <p className="buttonhover rounded purple text-white h-full max-w-[200px] flex justify-center items-center">
+        <div className="absolute bottom-4 right-10 h-[50px] w-[30%] z-30 ">
+          <p className="buttonhover rounded purple text-white h-[40px] w-[125px] sm:h-full sm:max-w-[200px] flex justify-center items-center">
             Learn More
           </p>
         </div>
         <div className="absolute opacity-30 bg-[#27313D]  h-full w-[100vw] "></div>
       </section>
-      <section className="HotlineBar blue h-[110px] justify-center items-center grid grid-cols-2  ">
-        <p className="px-5 text-[14px] md:text-[18px] sm:w-[400px] mx-auto font-bold text-white">
-          Help is available. Call or text the National Assault Hotline. Free.
+      <section className="HotlineBar blue h-[136px] justify-center items-center gap-4 flex flex-col sm:grid grid-cols-2  ">
+        <p className="px-5 text-[12px] text-center md:text-[18px] sm:w-[400px] mx-auto font-bold text-white">
+          Call or text the National Assault Hotline. Free.
           Confidential. Available 24/7.
         </p>
-        <div className="w-[full] flex justify-around ">
-          <div className="]">
-            <Button title="">800.656.HOPE</Button>
+        <div className="w-full flex justify-around px-4 ">
+          <div className="">
+            <Button className={"hidden sm:block"} title="">800.656.HOPE</Button>
+            <Button className={"block sm:hidden"} title="">Call</Button>
           </div>
           <div onClick={()=>setModal(true)}>
             <Button>Live Chat</Button>
@@ -47,7 +48,7 @@ const HomePage = () => {
       </section>
       <section className="Options flex flex-col items-center mt-10 gap-[40px]">
         <div className="">
-          <p className="text-[24px] font-bold">
+          <p className="text-[18px] sm:text-[24px] text-center font-bold">
             RAINN is the nation’s largest anti-sexual violence organization.
           </p>
         </div>
@@ -59,15 +60,15 @@ const HomePage = () => {
         </div>
         <div className="OptionContainer flex sm:hidden w-[80vw] justify-around">
           <div>
-            <Option title="Helping Survivors" />
-            <Option title="Educating the Public" />
+            <Option icon={survivors} title="Helping Survivors" />
+            <Option icon={education} title="Educating the Public" />
           </div>
           <div>
-            <Option title="Improving People Policy" />
-            <Option title="Cousneling and Training" />
+            <Option icon={policy} title="Improving People Policy" />
+            <Option icon={consulting} title="Cousneling and Training" />
           </div>
         </div>
-        <div className="Buttons mt-10 flex gap-4">
+        <div className="Buttons sm:mt-10 flex gap-4">
           <Button>Learn More</Button>
           <Button>Donate</Button>
         </div>

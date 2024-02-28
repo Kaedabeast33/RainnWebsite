@@ -23,9 +23,9 @@ const Chat = () => {
        {chats.map((chat)=> <ChatBox text={chat.text} lr={chat.lr}/>) }
        <ChatBox text="..." lr={"left-40"} />
       </section>
-      <section className='Input flex justify-center items-center bg-[#E9E4F0] h-[120px] w-[100vw] absolute bottom-0 p-10'>
-        <div className='flex gap-10'>
-        <input ref={input} type="text" placeholder='Start typing...' className='shadow-inner  shadow-[#717171] p-2 rounded-lg w-[70vw] min-w-[300px] h-[60px] bg-[#FFFFFF]' />
+      <section className='Input flex justify-center items-center bg-[#E9E4F0] h-[120px] w-[100vw] absolute bottom-0 sm:p-10'>
+        <div className='flex justify-center items-center gap-10'>
+        <input ref={input} type="text" placeholder='Start typing...' className='shadow-inner  shadow-[#717171] p-2 rounded-lg w-full  max-w-[90%] h-[60px] bg-[#FFFFFF]' />
         <Button onclick={() => {setChats(input.current.value?[...chats,{text:input.current.value,lr:"right-40"}]:[...chats])
                                input.current.value="" 
                                }

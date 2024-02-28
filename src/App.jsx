@@ -7,11 +7,15 @@ import Layout from './layout/Layout'
 import HomePage from './pages/HomePage'
 import GetHelp from './pages/GetHelp'
 import Chat from './pages/Chat'
+import {hotjar} from "react-hotjar"
+import { useEffect } from 'react'
 
 
 function App() {
   
-
+  useEffect(() => {
+    hotjar.initialize(3882563, 6);
+    }, []);
   return (
     <div className='w-[100vw]'>
     <Routes>

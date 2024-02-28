@@ -61,14 +61,14 @@ const NavigationOptions = ({ navigationitems = [], children,last }) => {
             `${hidden}` +` ${last}`
           }
         >
-          <ul className="border border-t-0 w-[30vw] min-w-[fit-content] bg-white border-slate-400">
+          <ul className="sm:border-b border-r border-l w-[30vw] min-w-[fit-content] bg-white border-black">
             {navigationitems.map((item, index) => (
               <li
                 className={" text-black px-4 py-2 text-[14px] flex  "+(index===0?"mt-4":"")}
                 key={index}
                 ref={(element) => (ref.current[index] = element)}
               >
-                <p className="hover:underline  w-[fit-content]">{item}</p>
+                <p className="sm:hover:underline  w-[fit-content]">{item}</p>
               </li>
             ))}
           </ul>

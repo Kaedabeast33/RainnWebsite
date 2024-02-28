@@ -22,7 +22,7 @@ const Header = () => {
       {hamMenu ? (
         <>
           <div onClick={() => setHamMenu(!hamMenu)} className="fixed w-[100vw] h-[100vh]   z-30"></div>
-          <div className="h-[90vh] w-[70vw] right-0 p-10 fixed bg-white opacity-100 z-40">
+          <div className="h-[90vh] w-[70vw] flex flex-col gap-4 border-black border right-0 p-10 fixed bg-white opacity-100 z-40">
             <div className="flex justify-between">
               <div className="flex">
               <div style={{ backgroundImage: `url(${vector2})`, backgroundSize: "contain", backgroundPosition: "center",backgroundRepeat: "no-repeat", height: "30px", width: "30px" }} className="Language"></div>
@@ -32,11 +32,11 @@ const Header = () => {
                 X
               </p>
             </div>
-            <div className="grid grid-cols-3 mx-auto border rounded-lg h-[40px] w-[210px] ">
+            <div className="grid overflow-hidden grid-cols-3 mx-auto border rounded-lg h-[40px] w-[210px] ">
               <div className="col-span-2">
-                <input className="w-full h-full"></input>
+                <input className="w-full h-full" placeholder="Search"></input>
               </div>
-              <div className="purple"></div>
+              <div className="buttonhover  purple p-2"><button style={{ backgroundImage: `url(${search})`, backgroundSize: "contain", backgroundPosition: "center",backgroundRepeat: "no-repeat" }} className="h-full w-full"> </button></div>
 
             </div>
             <div className="flex flex-col gap-10 mt-10">
@@ -172,12 +172,12 @@ const Header = () => {
             Help is available 24/7
           </p>
         </div>
-        <div className="h-[40px] w-full lavender  flex justify-around items-center whitespace-nowrap">
-          <p className="text-center border-r px-2 border-slate-400 text-[16px]  ">
+        <div className="h-[40px] w-full lavender  grid grid-cols-6 justify-around items-center whitespace-nowrap">
+          <p className="text-center w-full col-span-4 border-r px-2 border-slate-400 text-[16px]  ">
             Call 800.656.HOPE (4673)
           </p>
         
-          <p className="text-center w-full text-[16px]">Live Chat</p>
+          <p onClick={()=>setModal(true)} className="text-center w-full col-span-2 text-[16px]">Live Chat</p>
         </div>
       </div>
     </header>

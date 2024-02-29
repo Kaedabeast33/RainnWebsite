@@ -57,14 +57,14 @@ const Header = () => {
             Help is available 24/7
           </Row1Option>
           <div className="grid grid-cols-4 col-span-11  h-full  lavender">
-            <Link
+            <div
               className="text-[12px] col-span-3  lg:text-[18px] p-2  flex justify-center  h-full whitespace-nowrap  border-r border-slate-400"
               to={"/gethelp"}
             >
               <Row1Option span={""} color="" text="text-black">
                 Call 800.656.HOPE (4673)
               </Row1Option>
-            </Link>
+            </div>
             <div onClick={()=>setModal(true)}
               className="text-[12px] cursor-pointer  lg:text-[18px] min-w-[fit-content] flex py-2 justify-center h-full whitespace-nowrap  "
               to={"/gethelp"}

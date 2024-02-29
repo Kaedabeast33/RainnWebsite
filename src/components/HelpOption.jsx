@@ -32,7 +32,7 @@ const HelpOption = ({ pic1, pic2, children, onClick }) => {
             rotateY: isFlipped ? 180 : 360,
             scale: isFlipped ? 1.2 : 1,
           }}
-          className="Circle flip-card-inner   h-[130px] w-[130px]  flex justify-center items-center  rounded-full"
+          className="Circle flip-card-inner h-[90px] w-[90px]  sm:h-[130px] sm:w-[130px]  flex justify-center items-center  rounded-full"
         >
           <div className="flip-card-front purple border border-[#8F44D3] flex justify-center items-center h-full w-full rounded-full">
             <div
@@ -52,6 +52,7 @@ const HelpOption = ({ pic1, pic2, children, onClick }) => {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "contain",
+                transform: "scaleX(-1)",
               }}
               className="h-[70px] w-[70px]"
             ></div>

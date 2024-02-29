@@ -14,10 +14,9 @@ import LiveChatModal from "../components/LiveChatModal";
 import { useGlobalContext } from "../context/GlobalContext";
 
 const HomePage = () => {
-  const {modal,setModal}=useGlobalContext()
+  const { modal, setModal } = useGlobalContext();
   return (
     <div className="h-[full] ">
-     
       <section className="Carousel relative h-[160px] sm:h-[250px] bg-slate-800 w-full flex justify-center">
         <div className="bgcarousel  w-full   relative">
           <p className="text-white mx-[20px] -[10px] z-30 text-[20px] sm:text-[40px] font-bold absolute top-10 right-10">
@@ -25,23 +24,29 @@ const HomePage = () => {
           </p>
         </div>
         <div className="absolute bottom-4 right-10 h-[50px] w-[30%] z-30 ">
-          <p className="buttonhover rounded purple text-white h-[40px] w-[125px] sm:h-full sm:max-w-[200px] flex justify-center items-center">
-            Learn More
-          </p>
+          <Link to="/gethelp">
+            <p className="buttonhover rounded purple text-white h-[40px] w-[125px] sm:h-full sm:w-[200px] flex justify-center items-center">
+              Get Support
+            </p>
+          </Link>
         </div>
         <div className="absolute opacity-30 bg-[#27313D]  h-full w-[100vw] "></div>
       </section>
       <section className="HotlineBar blue h-[136px] justify-center items-center gap-4 flex flex-col sm:grid grid-cols-2  ">
         <p className="px-5 text-[12px] text-center md:text-[18px] sm:w-[400px] mx-auto font-bold text-white">
-          Call or text the National Assault Hotline. Free.
-          Confidential. Available 24/7.
+          Call or text the National Assault Hotline. Free. Confidential.
+          Available 24/7.
         </p>
         <div className="w-full flex justify-around px-4 ">
           <div className="">
-            <Button className={"hidden sm:block"} title="">800.656.HOPE</Button>
-            <Button className={"block sm:hidden"} title="">Call</Button>
+            <Button className={"hidden sm:block"} title="">
+              800.656.HOPE
+            </Button>
+            <Button className={"block sm:hidden"} title="">
+              Call
+            </Button>
           </div>
-          <div onClick={()=>setModal(true)}>
+          <div onClick={() => setModal(true)}>
             <Button>Live Chat</Button>
           </div>
         </div>
@@ -52,11 +57,11 @@ const HomePage = () => {
             RAINN is the nation’s largest anti-sexual violence organization.
           </p>
         </div>
-        <div className="OptionContainer hidden sm:flex w-[80vw] justify-around">
+        <div className="OptionContainer hidden sm:flex w-[80vw] max-w-[800px] justify-around">
           <Option icon={survivors} title="Helping Survivors" />
           <Option icon={education} title="Educating the Public" />
-          <Option icon={policy} title="Improving People Policy" />
-          <Option icon={consulting} title="Cousneling and Training" />
+          <Option icon={policy} title="Improving Public Policy" />
+          <Option icon={consulting} title="Counseling and Training" />
         </div>
         <div className="OptionContainer flex sm:hidden w-[80vw] justify-around">
           <div>
@@ -73,7 +78,7 @@ const HomePage = () => {
           <Button>Donate</Button>
         </div>
       </section>
-      <section className="Explore flex flex-col sm:grid mt-10 sm:grid-cols-3">
+      <section className="Explore z-30 flex flex-col w-[100vw] gap-4 items-center justify-center sm:p-10  sm:grid mt-10 sm:grid-cols-3">
         <ExplorePanels
           overlay="#11497C"
           icon={eye}

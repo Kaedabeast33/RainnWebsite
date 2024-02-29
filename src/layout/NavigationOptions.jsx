@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
-const NavigationOptions = ({ navigationitems = [], children,last }) => {
+const NavigationOptions = ({ navigationitems = [], children, last }) => {
   const [animate, setAnimate] = useState(false);
   const [items, setItems] = useState();
   const [hidden, setHidden] = useState("hidden");
@@ -58,13 +58,17 @@ const NavigationOptions = ({ navigationitems = [], children,last }) => {
         <div
           className={
             " naviagtionitems absolute bg-white   top-[100%] h-[fit-content] w-[180px]  " +
-            `${hidden}` +` ${last}`
+            `${hidden}` +
+            ` ${last}`
           }
         >
           <ul className="sm:border-b border-r border-l w-[30vw] min-w-[fit-content] bg-white border-black">
             {navigationitems.map((item, index) => (
               <li
-                className={" text-black px-4 py-2 text-[14px] flex  "+(index===0?"mt-4":"")}
+                className={
+                  " text-black px-4 py-2 text-[16px] flex  " +
+                  (index === 0 ? "mt-4" : "")
+                }
                 key={index}
                 ref={(element) => (ref.current[index] = element)}
               >

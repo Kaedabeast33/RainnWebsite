@@ -78,7 +78,7 @@ const HomePage = () => {
           <Button>Donate</Button>
         </div>
       </section>
-      <section className="Explore z-30 flex flex-col w-[100vw] gap-4 items-center justify-center sm:p-10  sm:grid mt-10 sm:grid-cols-3">
+      <section className="Explore overflow-hidden  flex flex-col w-[100vw] gap-4 items-center justify-center sm:p-10  sm:grid mt-10 sm:grid-cols-3">
         <ExplorePanels
           overlay="#11497C"
           icon={eye}

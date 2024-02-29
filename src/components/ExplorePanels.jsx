@@ -5,13 +5,14 @@ const ExplorePanels = ({ className, title, children, icon, overlay }) => {
   const ref = useRef(null);
 
   return (
-    <div
+    <div    onMouseEnter={() => ref.current.style.scale = "1.1"}
       className={
         className +
-        "   relative   h-[300px] w-[80vw] sm:w-full sm:h-[420px] flex flex-col gap-4 "
+        "   relative   h-[300px] w-[80vw] sm:w-full sm:h-[420px] flex flex-col justify-center items-center bg-[#8F44D3] rounded-[20px] cursor-pointer  "
       }
     >
-      <div
+      
+      <div 
         ref={ref}
         className="absolute top-0 h-full w-full"
         style={{
@@ -32,6 +33,7 @@ const ExplorePanels = ({ className, title, children, icon, overlay }) => {
         {children}
       </Button>
     </div>
+   
   );
 };
 

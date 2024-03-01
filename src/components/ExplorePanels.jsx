@@ -5,7 +5,7 @@ const ExplorePanels = ({ className, title, children, icon, overlay }) => {
   const ref = useRef(null);
 
   return (
-    <div    onMouseEnter={() => ref.current.style.scale = "1.1"}
+    <div    
       className={
         className +
         "   relative   h-[300px] w-[80vw] sm:w-full sm:h-[420px] flex flex-col justify-center items-center bg-[#8F44D3] rounded-[20px] cursor-pointer  "
